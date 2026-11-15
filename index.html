@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Miriam Shahidi's personal and professional working standards.">
+<meta property="og:title" content="Way of Working Card | Miriam Shahidi">
+<meta property="og:description" content="The standards I bring to every engagement.">
+<title>Way of Working Card</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap">
+<style>
+  /* Layout: one centered card on a deep green ground; numbered list of working standards, then three question boxes. Single dark look by choice. */
+  :root {
+    --ground: #1e4a3e;
+    --card: #235246;
+    --inset: #163d33;
+    --line: #2e6e5e;
+    --line-soft: #2a6055;
+    --accent: #3dd9b3;
+    --text-strong: #ffffff;
+    --text-title: #d4f5e8;
+    --text-body: #8ecfba;
+    --text-box: #ccf0e2;
+    --font-sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+    color-scheme: dark;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--text-box);
+    font-family: var(--font-sans);
+    padding-block: 32px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+
+  .card {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--accent);
+    padding: clamp(22px, 5vw, 48px);
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+
+  .title-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 16px;
+  }
+
+  h1 {
+    font-size: clamp(26px, 6vw, 32px);
+    font-weight: 300;
+    line-height: 1.2;
+    color: #e8f8f2;
+    text-wrap: balance;
+  }
+
+  .subtitle {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: italic;
+    color: #6abda4;
+  }
+
+  .info {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: 6px 14px 6px 8px;
+    cursor: help;
+    background: none;
+  }
+
+  .info:focus-visible { outline: 2px solid var(--text-strong); outline-offset: 3px; }
+
+  .info-dot {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--ground);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0;
+  }
+
+  .info-tip {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: min(360px, calc(100vw - 48px));
+    background: var(--inset);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    padding: 14px 18px;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0;
+    text-transform: none;
+    text-align: left;
+    line-height: 1.55;
+    color: var(--text-box);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-3px);
+    transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+    z-index: 5;
+  }
+
+  .info-tip strong { font-weight: 500; color: var(--text-strong); }
+
+  .info:hover .info-tip,
+  .info:focus .info-tip,
+  .info:focus-within .info-tip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .rule {
+    height: 1px;
+    background: var(--line);
+    margin-block: 24px 8px;
+  }
+
+  .pillars { list-style: none; padding: 0; margin: 0 0 28px; }
+
+  .pillar {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 0 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .pillar:last-child { border-bottom: 0; }
+
+  .pillar-num {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--accent);
+    padding-top: 2px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .pillar-title {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-title);
+    margin-bottom: 4px;
+  }
+
+  .pillar-desc {
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.55;
+    color: var(--text-body);
+  }
+
+  .anchors { display: flex; flex-direction: column; gap: 12px; }
+
+  .anchor {
+    background: var(--ground);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    padding: 18px 20px;
+  }
+
+  .anchor-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  .anchor-text { font-size: 17px; font-weight: 300; line-height: 1.5; color: var(--text-box); }
+  .anchor-text strong { font-weight: 500; color: var(--text-strong); }
+
+  @media (max-width: 480px) {
+    .pillar { grid-template-columns: 28px minmax(0, 1fr); gap: 0 12px; }
+    .anchor-text { font-size: 16px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .info-tip { transition: none; }
+  }
+</style>
+
+</head>
+<body>
+<main class="card">
+  <div class="eyebrow">Miriam Shahidi</div>
+
+  <div class="title-row">
+    <h1>Way of Working Card</h1>
+    <div class="info" tabindex="0" role="button" aria-describedby="info-tip">
+      <span class="info-dot">?</span>What is this?
+      <div class="info-tip" id="info-tip" role="tooltip">
+        <strong>These are my personal and professional values.</strong> They describe how I work, my leadership and collaborative style, and the standards I bring to every engagement, shaped by 8+ years across enterprise sales, customer success and consulting.
+      </div>
+    </div>
+  </div>
+  <p class="subtitle">The standards I bring to every engagement.</p>
+
+  <div class="rule"></div>
+
+  <ol class="pillars">
+    <li class="pillar">
+      <div class="pillar-num">01</div>
+      <div>
+        <div class="pillar-title">Be Authentic</div>
+        <div class="pillar-desc">A creative &amp; human-centric approach that strives to bring full authenticity to the work.</div>
+      </div>
+    </li>
+    <li class="pillar">
+      <div class="pillar-num">02</div>
+      <div>
+        <div class="pillar-title">Excellence &amp; Quality</div>
+        <div class="pillar-desc">Aim for excellence in output, process, and presence.</div>
+      </div>
+    </li>
+    <li class="pillar">
+      <div class="pillar-num">03</div>
+      <div>
+        <div class="pillar-title">Trust, Respect &amp; Empowerment</div>
+        <div class="pillar-desc">I foster this culture in every team I work with.</div>
+      </div>
+    </li>
+    <li class="pillar">
+      <div class="pillar-num">04</div>
+      <div>
+        <div class="pillar-title">Discernment &amp; Judgment from Experience</div>
+        <div class="pillar-desc">A unique perspective gained from diverse experience across enterprise sales, customer success &amp; the consulting world.</div>
+      </div>
+    </li>
+    <li class="pillar">
+      <div class="pillar-num">05</div>
+      <div>
+        <div class="pillar-title">The Challenger Approach</div>
+        <div class="pillar-desc">Embrace the challenger approach to question assumptions and push towards better.</div>
+      </div>
+    </li>
+    <li class="pillar">
+      <div class="pillar-num">06</div>
+      <div>
+        <div class="pillar-title">Wild Card Fluency</div>
+        <div class="pillar-desc">I understand the wild card elements of any process (highly nuanced situations) and think on my feet.</div>
+      </div>
+    </li>
+    <li class="pillar">
+      <div class="pillar-num">07</div>
+      <div>
+        <div class="pillar-title">True Customer Advocate</div>
+        <div class="pillar-desc">Understand and build relationships with tough or struggling customers.</div>
+      </div>
+    </li>
+    <li class="pillar">
+      <div class="pillar-num">08</div>
+      <div>
+        <div class="pillar-title">Notice the Details</div>
+        <div class="pillar-desc">Detail-oriented by nature; always paying special attention to crafting an exceptional customer experience.</div>
+      </div>
+    </li>
+    <li class="pillar">
+      <div class="pillar-num">09</div>
+      <div>
+        <div class="pillar-title">Cross Cultural Communication</div>
+        <div class="pillar-desc">Bridge the gap between technical and non-technical stakeholders.</div>
+      </div>
+    </li>
+    <li class="pillar">
+      <div class="pillar-num">10</div>
+      <div>
+        <div class="pillar-title">The Dare Element</div>
+        <div class="pillar-desc">Thinking bold + doing bold.</div>
+      </div>
+    </li>
+    <li class="pillar">
+      <div class="pillar-num">11</div>
+      <div>
+        <div class="pillar-title">Make It a Habit</div>
+        <div class="pillar-desc">Make all of these habits and actively practice them.</div>
+      </div>
+    </li>
+    <li class="pillar">
+      <div class="pillar-num">12</div>
+      <div>
+        <div class="pillar-title">Balance in All Things</div>
+        <div class="pillar-desc">Find balance between creativity &amp; technology, structure &amp; operational rigor.</div>
+      </div>
+    </li>
+    <li class="pillar">
+      <div class="pillar-num">13</div>
+      <div>
+        <div class="pillar-title">Agile &amp; Scrum</div>
+        <div class="pillar-desc">Bring Agile collaboration &amp; best practices to projects.</div>
+      </div>
+    </li>
+  </ol>
+
+  <div class="anchors">
+    <div class="anchor">
+      <div class="anchor-label">North Star Question</div>
+      <div class="anchor-text">What's the <strong>compelling, urgent problem?</strong> What's the <strong>why?</strong></div>
+    </div>
+    <div class="anchor">
+      <div class="anchor-label">Next Level Question</div>
+      <div class="anchor-text">What does the <strong>next level of this look like</strong> &amp; how do we <strong>get it to that level?</strong></div>
+    </div>
+    <div class="anchor">
+      <div class="anchor-label">The Big Idea</div>
+      <div class="anchor-text">It's not about what you know as much as <strong>how you think</strong> and having <strong>quality standards.</strong></div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
