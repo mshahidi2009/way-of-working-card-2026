@@ -5,12 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Miriam Shahidi's personal and professional working standards.">
 <meta property="og:title" content="Way of Working Card | Miriam Shahidi">
-<meta property="og:description" content="The standards I bring to every engagement.">
+<meta property="og:description" content="Professional standards, values &amp; working style">
 <title>Way of Working Card</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap">
 <style>
-  /* Layout: one centered card on a deep green ground; numbered list of working standards, then three question boxes. Single dark look by choice. */
   :root {
     --ground: #1e4a3e;
     --card: #235246;
@@ -33,6 +31,7 @@
     background: var(--ground);
     color: var(--text-box);
     font-family: var(--font-sans);
+    margin: 0;
     padding-block: 32px;
     padding-left: max(16px, env(safe-area-inset-left, 0px));
     padding-right: max(16px, env(safe-area-inset-right, 0px));
@@ -65,6 +64,7 @@
   }
 
   h1 {
+    margin: 0;
     font-size: clamp(26px, 6vw, 32px);
     font-weight: 300;
     line-height: 1.2;
@@ -73,7 +73,7 @@
   }
 
   .subtitle {
-    margin-top: 8px;
+    margin: 8px 0 0;
     font-size: 14px;
     font-weight: 300;
     font-style: italic;
@@ -212,6 +212,39 @@
   .anchor-text { font-size: 17px; font-weight: 300; line-height: 1.5; color: var(--text-box); }
   .anchor-text strong { font-weight: 500; color: var(--text-strong); }
 
+  .anchor-head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .anchor-head .anchor-label { margin-bottom: 0; }
+
+  .info-sm { padding: 3px; cursor: help; }
+  .info-sm .info-tip { left: 0; right: auto; width: min(260px, calc(100vw - 64px)); }
+
+  .cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 28px; }
+
+  .bullets { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+  .bullets.spaced { margin-top: 12px; }
+  .bullets li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--text-box);
+  }
+  .bullets li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 0.62em;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+  .bullets li strong { font-weight: 500; color: var(--text-strong); }
+  .bullets .sub { display: block; margin-top: 4px; font-size: 14px; font-style: italic; color: var(--text-body); }
+
+  @media (max-width: 560px) { .cols { grid-template-columns: minmax(0, 1fr); } }
+
   @media (max-width: 480px) {
     .pillar { grid-template-columns: 28px minmax(0, 1fr); gap: 0 12px; }
     .anchor-text { font-size: 16px; }
@@ -221,7 +254,6 @@
     .info-tip { transition: none; }
   }
 </style>
-
 </head>
 <body>
 <main class="card">
@@ -236,7 +268,7 @@
       </div>
     </div>
   </div>
-  <p class="subtitle">The standards I bring to every engagement.</p>
+  <p class="subtitle">Professional standards, values &amp; working style</p>
 
   <div class="rule"></div>
 
@@ -252,81 +284,60 @@
       <div class="pillar-num">02</div>
       <div>
         <div class="pillar-title">Excellence &amp; Quality</div>
-        <div class="pillar-desc">Aim for excellence in output, process, and presence.</div>
+        <div class="pillar-desc">Aim for excellence in output and process.</div>
       </div>
     </li>
     <li class="pillar">
       <div class="pillar-num">03</div>
       <div>
         <div class="pillar-title">Trust, Respect &amp; Empowerment</div>
-        <div class="pillar-desc">I foster this culture in every team I work with.</div>
+        <div class="pillar-desc">I aim to foster this culture for every team I work with.</div>
       </div>
     </li>
     <li class="pillar">
       <div class="pillar-num">04</div>
       <div>
-        <div class="pillar-title">Discernment &amp; Judgment from Experience</div>
-        <div class="pillar-desc">A unique perspective gained from diverse experience across enterprise sales, customer success &amp; the consulting world.</div>
+        <div class="pillar-title">True Customer Advocate</div>
+        <div class="pillar-desc">Bring a customer-obsessed approach to every stage &amp; interaction of the customer lifecycle and aim for excellence in Customer Experience.</div>
       </div>
     </li>
     <li class="pillar">
       <div class="pillar-num">05</div>
-      <div>
-        <div class="pillar-title">The Challenger Approach</div>
-        <div class="pillar-desc">Embrace the challenger approach to question assumptions and push towards better.</div>
-      </div>
-    </li>
-    <li class="pillar">
-      <div class="pillar-num">06</div>
-      <div>
-        <div class="pillar-title">Wild Card Fluency</div>
-        <div class="pillar-desc">I understand the wild card elements of any process (highly nuanced situations) and think on my feet.</div>
-      </div>
-    </li>
-    <li class="pillar">
-      <div class="pillar-num">07</div>
-      <div>
-        <div class="pillar-title">True Customer Advocate</div>
-        <div class="pillar-desc">Understand and build relationships with tough or struggling customers.</div>
-      </div>
-    </li>
-    <li class="pillar">
-      <div class="pillar-num">08</div>
       <div>
         <div class="pillar-title">Notice the Details</div>
         <div class="pillar-desc">Detail-oriented by nature; always paying special attention to crafting an exceptional customer experience.</div>
       </div>
     </li>
     <li class="pillar">
-      <div class="pillar-num">09</div>
+      <div class="pillar-num">06</div>
       <div>
         <div class="pillar-title">Cross Cultural Communication</div>
         <div class="pillar-desc">Bridge the gap between technical and non-technical stakeholders.</div>
       </div>
     </li>
     <li class="pillar">
-      <div class="pillar-num">10</div>
+      <div class="pillar-num">07</div>
       <div>
-        <div class="pillar-title">The Dare Element</div>
+        <div class="pillar-title">Embrace Moonshots and Big Bets</div>
         <div class="pillar-desc">Thinking bold + doing bold.</div>
       </div>
     </li>
     <li class="pillar">
-      <div class="pillar-num">11</div>
+      <div class="pillar-num">08</div>
       <div>
         <div class="pillar-title">Make It a Habit</div>
-        <div class="pillar-desc">Make all of these habits and actively practice them.</div>
+        <div class="pillar-desc">Be accountable for actively and consistently practicing these values.</div>
       </div>
     </li>
     <li class="pillar">
-      <div class="pillar-num">12</div>
+      <div class="pillar-num">09</div>
       <div>
         <div class="pillar-title">Balance in All Things</div>
-        <div class="pillar-desc">Find balance between creativity &amp; technology, structure &amp; operational rigor.</div>
+        <div class="pillar-desc">Find balance between creativity &amp; technology, scale &amp; experience, operational rigor &amp; culture, etc.</div>
       </div>
     </li>
     <li class="pillar">
-      <div class="pillar-num">13</div>
+      <div class="pillar-num">10</div>
       <div>
         <div class="pillar-title">Agile &amp; Scrum</div>
         <div class="pillar-desc">Bring Agile collaboration &amp; best practices to projects.</div>
@@ -336,12 +347,33 @@
 
   <div class="anchors">
     <div class="anchor">
-      <div class="anchor-label">North Star Question</div>
-      <div class="anchor-text">What's the <strong>compelling, urgent problem?</strong> What's the <strong>why?</strong></div>
+      <div class="anchor-head">
+        <div class="anchor-label">Upskilling</div>
+        <div class="info info-sm" tabindex="0" role="button" aria-label="What is this?" aria-describedby="tip-up"><span class="info-dot">?</span>
+          <div class="info-tip" id="tip-up" role="tooltip">Training I'm currently exploring</div>
+        </div>
+      </div>
+      <div class="cols">
+        <ul class="bullets">
+          <li><strong>Claude Certified Architect Foundations</strong> credential</li>
+        </ul>
+        <ul class="bullets">
+          <li><strong>Reverse Engineer Anything (REA)</strong> framework
+            <span class="sub">Exploring multi-agent evaluation frameworks and deterministic guardrails for non-deterministic workflows.</span>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="anchor">
-      <div class="anchor-label">Next Level Question</div>
-      <div class="anchor-text">What does the <strong>next level of this look like</strong> &amp; how do we <strong>get it to that level?</strong></div>
+      <div class="anchor-label">Current Projects</div>
+      <div class="anchor-text"><strong>Perspective Atlas.</strong> A strategy &amp; complex problem-solving platform for business, career and academic scenarios.</div>
+      <ul class="bullets spaced">
+        <li><strong>Workflow:</strong> offers multiple perspectives and modes of thinking for a scenario. The user picks the one that resonates, then the app builds empathy maps and visual diagrams and drills down toward a decision and action.</li>
+        <li><strong>Logic:</strong> weaves human intuition into the analysis and supports multiple report types, so the output reads like a thinking partner, not a generic summary.</li>
+        <li><strong>UX strategy:</strong> a guided, choice-led path from an ambiguous problem to a clear next step.</li>
+        <li><strong>UI design:</strong> visual-first outputs that are easy to scan and share.</li>
+        <li><strong>Testing:</strong> built as a live prototype and refined by running real scenarios through it.</li>
+      </ul>
     </div>
     <div class="anchor">
       <div class="anchor-label">The Big Idea</div>
